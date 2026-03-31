@@ -6,12 +6,14 @@ import com.javaguides.ems.models.Employee;
 import com.javaguides.ems.repository.EmployeeRepository;
 import com.javaguides.ems.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
     @Override
@@ -23,6 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<EmployeeDto> allEmployees() {
 //       List<Employee> employees = employeeRepository.findAll();
 //        List<EmployeeDto> list = employees.stream().map(EmployeeMapper::mapToEmployeeDto).toList();
+        log.info("EmployeeServiceImpl  : allEmployees started.");
         return employeeRepository.findAll().stream().map(EmployeeMapper::mapToEmployeeDto).toList();
     }
 
