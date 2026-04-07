@@ -18,8 +18,8 @@ public class EmployeeController {
 
     private final EmployeeService employeeService;
     @GetMapping(path="/healthCheck")
-    public ResponseEntity<String> healthCheck(){
-        return new ResponseEntity<>("health check is fine.", HttpStatus.OK);
+    public String healthCheck() {
+        return "OK";
     }
 
     @PostMapping(path="create-employee")
