@@ -19,7 +19,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
     @GetMapping
     public ResponseEntity<String> healthCheck(){
-        return new ResponseEntity<>("health check is fine", HttpStatus.OK);
+        return new ResponseEntity<>("health check is fine.", HttpStatus.OK);
     }
 
     @PostMapping(path="create-employee")
