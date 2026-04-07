@@ -17,7 +17,7 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
-    @GetMapping
+    @GetMapping("/")
     public String healthCheck() {
         return "OK...";
     }
