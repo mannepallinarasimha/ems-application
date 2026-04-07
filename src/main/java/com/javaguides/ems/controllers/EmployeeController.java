@@ -19,7 +19,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
     @GetMapping(path="/healthCheck")
     public String healthCheck() {
-        return "OK";
+        return "OK...";
     }
 
     @PostMapping(path="create-employee")
