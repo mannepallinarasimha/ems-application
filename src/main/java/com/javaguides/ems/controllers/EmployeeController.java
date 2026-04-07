@@ -17,7 +17,7 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
-    @GetMapping(path="/")
+    @GetMapping
     public ResponseEntity<String> healthCheck(){
         return new ResponseEntity<>("health check is fine", HttpStatus.OK);
     }
