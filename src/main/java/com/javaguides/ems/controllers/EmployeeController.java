@@ -17,6 +17,10 @@ import java.util.List;
 public class EmployeeController {
 
     private final EmployeeService employeeService;
+    @GetMapping(path="/")
+    public ResponseEntity<String> healthCheck(){
+        return new ResponseEntity<>("health check is fine", HttpStatus.OK);
+    }
 
     @PostMapping(path="create-employee")
     public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto){
